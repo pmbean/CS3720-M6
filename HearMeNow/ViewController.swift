@@ -57,6 +57,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
             do {
                 try soundPlayer = AVAudioPlayer(contentsOf: url)
                 soundPlayer?.delegate = self
+                soundPlayer?.enableRate = true
+                soundPlayer?.rate = 0.5
                 soundPlayer?.play()
                 
             } catch {
